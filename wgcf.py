@@ -140,8 +140,8 @@ def get_wireguard_conf(private_key: str, address_1: str, address_2: str, public_
 [Interface]
 PrivateKey = {private_key}
 DNS = 1.1.1.1
-Address = {address_1}
-Address = {address_2}
+Address = {address_1}/32
+Address = {address_2}/128
 
 [Peer]
 PublicKey = {public_key}
