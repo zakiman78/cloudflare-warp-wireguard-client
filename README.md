@@ -25,10 +25,5 @@ Create a new file `wgcf-identity.json` with your account details in the followin
 ```
 
 ## Extracting from Android [ROOT ONLY]
-- To obtain the `account_id` and `access_token`, you can either:
+- To obtain the `account_id` and `access_token`, you can:
   - Grab the application's private data and read the shared preferences ([Titanium Backup](https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup))
-  - OR
-  - Sniff the traffic (requires SSL-pinning bypass)
-- `private_key` is also stored in the shared preferences. However, it is encrypted with a key stored in the [Android keystore system](https://developer.android.com/training/articles/keystore). You can extract this information directly from the app using [Frida](https://github.com/frida/frida)
-
-Sample scripts can be found in [frida-cloudflare.js](frida-cloudflare.js). Use the magic strings provided in the comments to find the correct symbol names
